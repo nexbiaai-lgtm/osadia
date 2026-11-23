@@ -44,12 +44,17 @@ STEPS = [('Nos conocemos', '15 minutos para entender tu negocio, tu cliente y c�
          ('Plan del mes', 'Te enviamos el calendario con las publicaciones y lo ajustamos contigo.'),
          ('Creamos y publicamos', 'Diseñamos, editamos y publicamos. Tú solo nos mandas fotos o vídeos de tu día a día.'),
          ('Medimos y mejoramos', 'Cada mes vemos los números y repetimos lo que trae clientes.')]
-PLANS = [('Arranque', False, ['1 red social', '8 publicaciones al mes', 'Diseño con tu marca', 'Informe mensual']),
-         ('Crecimiento', True, ['2 redes sociales', '12 publicaciones al mes, con reels', 'Respuesta a comentarios y mensajes', 'Informe y reunión mensual']),
-         ('A medida', False, ['Las redes que necesites', 'Campañas de anuncios en Meta', 'Grabación en tu negocio', 'Lo que tu negocio pida'])]
+PLANS = [('Arranque', '99 €<small>/mes</small>', False, ['1 red social (Instagram, TikTok o Facebook)', '8 publicaciones al mes: posts y carruseles', 'Diseño con tu marca', 'Textos y hashtags de tu zona', 'Informe mensual']),
+         ('Crecimiento', 'Precio a medida', True, ['2 redes sociales', '12 publicaciones al mes con reels', 'Stories cada semana', 'Respuesta a comentarios y mensajes', 'Informe y reunión mensual']),
+         ('Escala viral', 'Precio a medida', False, ['Guiones de vídeos con gancho en los 3 primeros segundos', 'Grabación guiada o en tu negocio', 'Edición estilo reels y TikTok con subtítulos', 'Tendencias y audios del momento', 'Los vídeos que mejor funcionan, impulsados con anuncios'])]
+VIRAL = [('Estudiamos qué funciona', 'Miramos las tendencias de tu sector y los vídeos de tu competencia que más se ven.'),
+         ('Escribimos el guion', 'Gancho en los primeros 3 segundos, una idea por vídeo y una llamada a la acción clara.'),
+         ('Grabamos y editamos', 'Te decimos qué grabar con el móvil o vamos nosotros. Editamos con ritmo, subtítulos y audios en tendencia.'),
+         ('Medimos la retención', 'Vemos cuánta gente aguanta hasta el final y qué vídeos traen mensajes.'),
+         ('Repetimos y empujamos', 'Hacemos más de lo que funciona y le damos un pequeño presupuesto en anuncios para llegar más lejos.')]
 FAQ = [('¿Tengo que grabar yo los vídeos?', 'Te decimos exactamente qué grabar con el móvil, en pocos minutos. Si lo prefieres, vamos a tu negocio y grabamos nosotros.'),
        ('¿Hay permanencia?', 'No. Trabajamos mes a mes y puedes dejarlo cuando quieras.'),
-       ('¿Cuánto cuesta?', 'Depende de cuántas redes y publicaciones necesites. En la llamada de 15 minutos te damos un precio cerrado.'),
+       ('¿Cuánto cuesta?', 'Desde 99 € al mes con el plan Arranque. Los planes Crecimiento y Escala viral dependen de cuántas redes y vídeos necesites; te damos el precio cerrado en la llamada.'),
        ('¿Y si ya tengo redes?', 'Mejor: partimos de lo que tienes, vemos qué funciona y lo ordenamos.')]
 
 def card(t, p, n=None):
@@ -85,10 +90,16 @@ main = f'''<main>
     {ig_grid('rs-feed', 4)}
   </div>
 </section>
-<section class="band-light">
+<section class="band-light" id="planes">
   <div class="wrap">
-    <div class="section-head"><h2>Elige cómo empezar</h2><p>Sin permanencia. En la llamada te damos el precio cerrado del plan que encaje contigo.</p></div>
-    <div class="rs-plans">{''.join(f'<div class="rs-plan{" hl" if hl else ""}"><h3>{n}</h3><ul>{"".join(f"<li>{x}</li>" for x in li)}</ul><a class="btn btn-primary" href="contacto.html">Pedir precio</a></div>' for n, hl, li in PLANS)}</div>
+    <div class="section-head"><h2>Planes desde 99 € al mes</h2><p>Sin permanencia. Empieza con lo básico y sube de plan cuando quieras crecer más rápido.</p></div>
+    <div class="rs-plans">{''.join(f'<div class="rs-plan{" hl" if hl else ""}"><h3>{n}</h3><p class="rs-price">{pr}</p><ul>{"".join(f"<li>{x}</li>" for x in li)}</ul><a class="btn btn-primary" href="contacto.html">{"Empezar por 99 €" if pr.startswith("99") else "Pedir precio"}</a></div>' for n, pr, hl, li in PLANS)}</div>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="section-head"><h2>Cómo escalamos tus redes con vídeos</h2><p>Nadie puede prometer que un vídeo se haga viral. Lo que sí hacemos es seguir un método que multiplica las posibilidades.</p></div>
+    <div class="rs-viral">{''.join(f'<div class="rs-card"><span class="rs-num">{i+1:02d}</span><h3>{t}</h3><p>{p}</p></div>' for i, (t, p) in enumerate(VIRAL))}</div>
   </div>
 </section>
 <section id="faq">
