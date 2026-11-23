@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Recepcionista virtual con IA | Crecemia Granada</title>
+<meta name="description" content="Un asistente de voz natural en español atiende el teléfono, informa y agenda citas cuando tú no puedes coger. Ideal para clínicas, laboratorios y negocios con muchas llamadas.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://www.crecemia.es/lp-recepcionista-voz.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#4B3AA6">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}html,body{margin:0}body{font-family:Inter,system-ui,sans-serif;color:#1D0E45;background:#FBF9FF;line-height:1.5}
+a{color:#4B3AA6}.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.lp-top{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.lp-logo{height:34px;width:auto;display:block}
+.lp-call{font-weight:700;text-decoration:none;color:#4B3AA6;border:1.5px solid #CDBBFF;border-radius:999px;padding:8px 16px;white-space:nowrap}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;grid-template-areas:'head card' 'details card';column-gap:40px;align-items:start;padding:24px 0 48px}.head{grid-area:head}.details{grid-area:details}.card{grid-area:card}
+h1{font-family:Sora,Inter,sans-serif;font-weight:800;font-size:clamp(30px,4.4vw,50px);line-height:1.08;letter-spacing:-.02em;margin:8px 0 16px}
+h1 span{color:#6A3DD8}.sub{font-size:18px;color:#4A3D6B;margin:0 0 22px}
+.ticks{list-style:none;padding:0;margin:0 0 24px;display:grid;gap:10px}
+.ticks li{padding-left:32px;position:relative;font-weight:600}
+.ticks li:before{content:"";position:absolute;left:0;top:2px;width:22px;height:22px;border-radius:50%;background:#EDE6FF url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%236A3DD8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
+.trust{display:flex;flex-wrap:wrap;gap:8px}.trust span{background:#fff;border:1px solid #E7DCFF;border-radius:999px;padding:6px 12px;font-size:14px;font-weight:600;color:#4B3AA6}
+.card{background:#fff;border-radius:22px;box-shadow:0 24px 60px rgba(45,25,110,.14);padding:26px;position:sticky;top:16px}
+.card h2{font-family:Sora,Inter,sans-serif;font-size:22px;margin:0 0 4px}.card .step{font-size:13px;font-weight:700;color:#6A3DD8;text-transform:uppercase;letter-spacing:.06em}
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0 4px}
+.chips button{font:600 15px Inter,sans-serif;padding:14px 12px;border-radius:14px;border:1.5px solid #E1D6FA;background:#FBF9FF;color:#1D0E45;cursor:pointer;text-align:left}
+.chips button:hover,.chips button[aria-pressed=true]{border-color:#6A3DD8;background:#F3EDFF}
+.field{display:block;margin:14px 0 0}.field span{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
+.field input{width:100%;font:16px Inter,sans-serif;padding:14px 14px;border-radius:12px;border:1.5px solid #E1D6FA;background:#fff}
+.field input:focus{outline:none;border-color:#6A3DD8;box-shadow:0 0 0 4px #EDE6FF}
+.go{width:100%;margin-top:18px;font:700 17px Inter,sans-serif;background:#4B3AA6;color:#fff;border:0;border-radius:999px;padding:16px;cursor:pointer;box-shadow:0 10px 24px rgba(75,58,166,.3)}
+.go:disabled{opacity:.7;cursor:wait}.back{background:none;border:0;color:#6B5F8A;font:600 14px Inter,sans-serif;cursor:pointer;padding:8px 0;margin-top:6px}
+.err{color:#B3261E;font-size:14px;margin:10px 0 0}.legal{font-size:12px;color:#6B5F8A;margin:14px 0 0}
+.chosen{font-size:14px;color:#4A3D6B;background:#F7F3FF;border-radius:10px;padding:8px 12px;margin-top:12px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.or{font-size:14px;color:#6B5F8A;text-align:center;margin:14px 0 0}
+.logos{padding:28px 0 40px;text-align:center}.logos p{font-size:14px;font-weight:700;color:#6B5F8A;text-transform:uppercase;letter-spacing:.08em;margin:0 0 16px}
+.logos div{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:22px}.logos img{height:46px;width:auto;filter:grayscale(1);opacity:.75}
+.how{background:#fff;padding:44px 0}.how h2{font-family:Sora,Inter,sans-serif;text-align:center;font-size:28px;margin:0 0 24px}
+.steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.steps3 div{background:#FBF9FF;border-radius:18px;padding:20px}
+.steps3 b{display:block;font-family:Sora,Inter,sans-serif;font-size:18px;margin-bottom:4px}.steps3 i{font-style:normal;color:#6A3DD8;font-weight:800}
+footer{padding:24px 0 110px;font-size:13px;color:#6B5F8A;text-align:center}
+.sticky{display:none}
+@media (max-width:860px){.hero{grid-template-columns:1fr;grid-template-areas:'head' 'card' 'details';row-gap:22px;padding-top:8px}.sub{font-size:16px;margin-bottom:0}h1{margin-top:0}.card{position:static}.steps3{grid-template-columns:1fr}
+ .sticky{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#fff;box-shadow:0 -8px 24px rgba(45,25,110,.12)}
+ .sticky a{flex:1;text-align:center;text-decoration:none;font-weight:700;border-radius:999px;padding:14px 8px}
+ .sticky .c{background:#4B3AA6;color:#fff}.sticky .w{background:#E9FBF1;color:#0E7A43}.lp-call{display:none}}
+</style>
+<script src="consent.js?v=3"></script>
+</head>
+<body data-pre="Recepcionista de voz">
+<div class="wrap">
+  <div class="lp-top"><svg class="lp-logo" role="img" aria-label="Crecemia" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 621 130" ><g transform="translate(0 8) scale(1.0)"><g transform="skewX(-10) translate(10 0)"><rect x="20" y="64" width="22" height="36" rx="11" fill="#4B3AA6"/><rect x="49" y="38" width="22" height="62" rx="11" fill="#7A4FD1"/><rect x="78" y="12" width="22" height="88" rx="11" fill="#C6A9FF"/></g></g><g transform="translate(0 0)"><path d="M181.8 102.0Q174.6 102.0 169.3 99.65Q164.0 97.3 160.45 93.3Q156.9 89.3 155.15 84.19999999999999Q153.4 79.1 153.4 73.6V71.6Q153.4 65.8 155.25 60.599999999999994Q157.1 55.4 160.7 51.4Q164.3 47.4 169.60000000000002 45.099999999999994Q174.9 42.8 181.8 42.8Q189.4 42.8 195.2 45.8Q201.0 48.8 204.45 54.05Q207.9 59.3 208.3 66.1H190.5Q190.2 62.8 188.05 60.5Q185.9 58.199999999999996 181.8 58.199999999999996Q178.3 58.199999999999996 176.05 60.0Q173.8 61.8 172.7 65.0Q171.6 68.2 171.6 72.6Q171.6 76.7 172.55 79.9Q173.5 83.1 175.75 84.85Q178.0 86.6 181.8 86.6Q184.6 86.6 186.5 85.6Q188.4 84.6 189.5 82.75Q190.6 80.9 190.9 78.4H208.7Q208.3 85.4 204.75 90.7Q201.2 96.0 195.3 99.0Q189.4 102.0 181.8 102.0Z" fill="#1D0E45"/><path d="M214.4 100.0V44.8H228.8V68.8H228.60000000000002Q228.60000000000002 57.199999999999996 233.45000000000002 50.599999999999994Q238.3 44.0 247.4 44.0H249.60000000000002V59.599999999999994H245.4Q239.3 59.599999999999994 235.95000000000002 62.89999999999999Q232.60000000000002 66.19999999999999 232.60000000000002 72.4V100.0Z" fill="#1D0E45"/><path d="M279.20000000000005 102.0Q272.20000000000005 102.0 266.80000000000007 99.6Q261.40000000000003 97.2 257.70000000000005 93.1Q254.00000000000003 89.0 252.05 83.9Q250.10000000000002 78.8 250.10000000000002 73.4V71.4Q250.10000000000002 65.8 252.05 60.65Q254.00000000000003 55.5 257.65000000000003 51.5Q261.3 47.5 266.6 45.15Q271.90000000000003 42.8 278.6 42.8Q287.5 42.8 293.70000000000005 46.8Q299.90000000000003 50.8 303.20000000000005 57.349999999999994Q306.5 63.9 306.5 71.6V77.4H257.70000000000005V67.6H296.0L289.70000000000005 72.0Q289.70000000000005 67.3 288.45000000000005 64.05Q287.20000000000005 60.8 284.75 59.099999999999994Q282.3 57.4 278.6 57.4Q275.0 57.4 272.35 59.05Q269.70000000000005 60.699999999999996 268.30000000000007 64.05Q266.90000000000003 67.4 266.90000000000003 72.5Q266.90000000000003 77.1 268.20000000000005 80.44999999999999Q269.5 83.8 272.20000000000005 85.6Q274.90000000000003 87.4 279.20000000000005 87.4Q283.0 87.4 285.45000000000005 86.1Q287.90000000000003 84.8 288.90000000000003 82.6H305.5Q304.3 88.2 300.75 92.6Q297.20000000000005 97.0 291.75 99.5Q286.3 102.0 279.20000000000005 102.0Z" fill="#1D0E45"/><path d="M337.8 102.0Q330.6 102.0 325.3 99.65Q320.0 97.3 316.45 93.3Q312.9 89.3 311.15 84.19999999999999Q309.4 79.1 309.4 73.6V71.6Q309.4 65.8 311.25 60.599999999999994Q313.1 55.4 316.70000000000005 51.4Q320.3 47.4 325.6 45.099999999999994Q330.9 42.8 337.8 42.8Q345.4 42.8 351.2 45.8Q357.0 48.8 360.45 54.05Q363.9 59.3 364.3 66.1H346.5Q346.2 62.8 344.04999999999995 60.5Q341.9 58.199999999999996 337.8 58.199999999999996Q334.3 58.199999999999996 332.05 60.0Q329.8 61.8 328.70000000000005 65.0Q327.6 68.2 327.6 72.6Q327.6 76.7 328.55 79.9Q329.5 83.1 331.75 84.85Q334.0 86.6 337.8 86.6Q340.6 86.6 342.5 85.6Q344.4 84.6 345.5 82.75Q346.6 80.9 346.9 78.4H364.7Q364.3 85.4 360.75 90.7Q357.2 96.0 351.29999999999995 99.0Q345.4 102.0 337.8 102.0Z" fill="#1D0E45"/><path d="M396.3 102.0Q389.3 102.0 383.9 99.6Q378.5 97.2 374.8 93.1Q371.1 89.0 369.15 83.9Q367.2 78.8 367.2 73.4V71.4Q367.2 65.8 369.15 60.65Q371.1 55.5 374.75 51.5Q378.40000000000003 47.5 383.70000000000005 45.15Q389.0 42.8 395.7 42.8Q404.6 42.8 410.8 46.8Q417.0 50.8 420.3 57.349999999999994Q423.6 63.9 423.6 71.6V77.4H374.8V67.6H413.1L406.8 72.0Q406.8 67.3 405.55 64.05Q404.3 60.8 401.85 59.099999999999994Q399.40000000000003 57.4 395.7 57.4Q392.1 57.4 389.45000000000005 59.05Q386.8 60.699999999999996 385.4 64.05Q384.0 67.4 384.0 72.5Q384.0 77.1 385.3 80.44999999999999Q386.6 83.8 389.3 85.6Q392.0 87.4 396.3 87.4Q400.1 87.4 402.55 86.1Q405.0 84.8 406.0 82.6H422.6Q421.40000000000003 88.2 417.85 92.6Q414.3 97.0 408.85 99.5Q403.40000000000003 102.0 396.3 102.0Z" fill="#1D0E45"/><path d="M429.70000000000005 100.0V44.8H444.1V68.6H443.3Q443.3 60.0 445.45000000000005 54.349999999999994Q447.6 48.699999999999996 451.8 45.849999999999994Q456.0 43.0 462.1 43.0H462.90000000000003Q469.1 43.0 473.25 45.849999999999994Q477.40000000000003 48.699999999999996 479.55000000000007 54.349999999999994Q481.70000000000005 60.0 481.70000000000005 68.6H477.5Q477.5 60.0 479.65 54.349999999999994Q481.8 48.699999999999996 486.0 45.849999999999994Q490.20000000000005 43.0 496.3 43.0H497.1Q503.3 43.0 507.55 45.849999999999994Q511.8 48.699999999999996 514.0500000000001 54.349999999999994Q516.3000000000001 60.0 516.3000000000001 68.6V100.0H498.1V68.1Q498.1 64.3 496.05 61.75Q494.0 59.199999999999996 490.20000000000005 59.199999999999996Q486.40000000000003 59.199999999999996 484.25 61.75Q482.1 64.3 482.1 68.3V100.0H463.90000000000003V68.1Q463.90000000000003 64.3 461.85 61.75Q459.8 59.199999999999996 456.0 59.199999999999996Q452.20000000000005 59.199999999999996 450.05000000000007 61.75Q447.90000000000003 64.3 447.90000000000003 68.3V100.0Z" fill="#1D0E45"/><path d="M527.6000000000001 100.0V44.8H545.8000000000001V100.0ZM520.6000000000001 58.0V44.8H545.8000000000001V58.0ZM535.1000000000001 40.4Q530.1000000000001 40.4 527.7500000000001 37.849999999999994Q525.4000000000001 35.3 525.4000000000001 31.299999999999997Q525.4000000000001 27.299999999999997 527.7500000000001 24.749999999999993Q530.1000000000001 22.19999999999999 535.0000000000001 22.19999999999999Q540.0000000000001 22.19999999999999 542.3000000000002 24.749999999999993Q544.6000000000001 27.299999999999997 544.6000000000001 31.299999999999997Q544.6000000000001 35.3 542.3000000000002 37.849999999999994Q540.0000000000001 40.4 535.1000000000001 40.4Z" fill="#6A3DD8"/><path d="M589.1000000000001 100.0V83.8H586.1000000000001V66.5Q586.1000000000001 62.699999999999996 584.3500000000001 60.849999999999994Q582.6000000000001 59.0 578.6000000000001 59.0Q576.7000000000002 59.0 573.0000000000002 59.099999999999994Q569.3000000000002 59.199999999999996 565.2000000000002 59.39999999999999Q561.1000000000001 59.599999999999994 557.7000000000002 59.8V44.599999999999994Q560.1000000000001 44.4 563.4000000000001 44.2Q566.7000000000002 44.0 570.2500000000002 43.9Q573.8000000000002 43.8 576.8000000000002 43.8Q585.3000000000002 43.8 591.2500000000002 46.3Q597.2000000000002 48.8 600.3500000000001 53.8Q603.5000000000001 58.8 603.5000000000001 66.5V100.0ZM571.6000000000001 101.4Q565.8000000000002 101.4 561.3000000000002 99.30000000000001Q556.8000000000002 97.2 554.2500000000002 93.25Q551.7000000000002 89.3 551.7000000000002 83.8Q551.7000000000002 77.6 555.0000000000002 73.75Q558.3000000000002 69.9 564.1000000000001 68.1Q569.9000000000001 66.3 577.4000000000001 66.3H588.1000000000001V75.7H577.4000000000001Q573.7000000000002 75.7 571.7000000000002 77.55000000000001Q569.7000000000002 79.4 569.7000000000002 82.5Q569.7000000000002 85.5 571.7000000000002 87.35Q573.7000000000002 89.2 577.4000000000001 89.2Q579.8000000000002 89.2 581.6500000000001 88.35Q583.5000000000001 87.5 584.7 85.4Q585.9000000000001 83.3 586.1000000000001 79.6L590.3000000000002 83.6Q589.8000000000002 89.3 587.5500000000002 93.25Q585.3000000000002 97.2 581.3500000000001 99.30000000000001Q577.4000000000001 101.4 571.6000000000001 101.4Z" fill="#6A3DD8"/></g></svg><a class="lp-call" href="tel:+34620762842">Llamar · 620 76 28 42</a></div>
+  <main class="hero">
+    <section class="head">
+      <h1>Recepcionista virtual con IA: <span>nunca pierdas una llamada</span></h1>
+      <p class="sub">Un asistente de voz natural en español atiende el teléfono, informa y agenda citas cuando tú no puedes coger. Ideal para clínicas, laboratorios y negocios con muchas llamadas.</p>
+    </section>
+    <section class="details">
+      <ul class="ticks"><li>Atiende 24/7, también si estás comunicando</li><li>Voz natural, nada de «pulse 1»</li><li>Agenda la cita y te deja el resumen</li><li>Pruébalo ahora: llama al 936 94 09 26 (demo de una clínica)</li></ul>
+      <div class="trust"><span>Consultoría gratis de 15 min</span><span>Sin permanencia</span><span>Equipo en Granada</span><span>Te llamamos hoy</span></div>
+    </section>
+    <aside class="card" aria-labelledby="ft">
+      <div id="s1">
+        <div class="step">Paso 1 de 2</div>
+        <h2 id="ft">¿Qué necesitas?</h2>
+        <div class="chips"><button type="button" aria-pressed="false">Una página web</button><button type="button" aria-pressed="false">Chatbot de WhatsApp</button><button type="button" aria-pressed="false">Recepcionista de voz</button><button type="button" aria-pressed="false">Salir en Google (SEO)</button><button type="button" aria-pressed="false">Automatizar tareas</button><button type="button" aria-pressed="false">No lo sé, asesoradme</button></div>
+        <p class="or">o llámanos al <a href="tel:+34620762842"><b>620 76 28 42</b></a></p>
+      </div>
+      <div id="s2" hidden>
+        <div class="step">Paso 2 de 2</div>
+        <h2>¿A qué número te llamamos?</h2>
+        <div class="chosen" id="chosen"></div>
+        <form id="lead" novalidate>
+          <label class="field"><span>Tu nombre</span><input name="nombre" id="fName" autocomplete="name" required></label>
+          <label class="field"><span>Teléfono o WhatsApp</span><input name="telefono" type="tel" inputmode="tel" autocomplete="tel" placeholder="6XX XX XX XX" required></label>
+          <input class="hp" name="url_trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="go" id="go" type="submit">Quiero que me llaméis →</button>
+          <p class="err" id="err" hidden></p>
+          <button class="back" id="back" type="button">← Cambiar lo que necesito</button>
+          <p class="legal">Responsable: Daniel Mata Jiménez (Crecemia). Usamos tu nombre y teléfono solo para llamarte por esta consulta. Puedes ejercer tus derechos escribiendo a info@nexbia.es. <a href="privacidad.html">Política de privacidad</a>.</p>
+        </form>
+      </div>
+    </aside>
+  </main>
+</div>
+<section class="logos"><div class="wrap"><p>Negocios que ya trabajan con nosotros</p><div><img loading="lazy" src="logos/bhd-vintage.jpg" alt="Logo de BHD Vintage"><img loading="lazy" src="logos/jj-mayoni.jpg" alt="Logo de Pescados y Mariscos J.J. Mayoni"><img loading="lazy" src="logos/n-digital-law.jpg" alt="Logo de N Digital Law"><img loading="lazy" src="logos/rydalca.jpg" alt="Logo de Rydalca"><img loading="lazy" src="logos/lock-wash.jpg" alt="Logo de Lock & Wash Experience"><img loading="lazy" src="logos/dentalproff.jpg" alt="Logo de DentalProff"><img loading="lazy" src="logos/sba.jpg" alt="Logo de SmartBook AI"></div></div></section>
+<section class="how"><div class="wrap"><h2>Cómo empezamos</h2><div class="steps3">
+  <div><i>1</i><b>Nos dices qué necesitas</b>Dos clics y tu teléfono. Nada más.</div>
+  <div><i>2</i><b>Te llamamos</b>En horario laboral, normalmente en minutos. Son 15 minutos y es gratis.</div>
+  <div><i>3</i><b>Te decimos qué hacer primero</b>Con precio cerrado y sin permanencia. Si no te encaja, no pasa nada.</div>
+</div></div></section>
+<footer><div class="wrap">Crecemia · Agencia de IA y marketing en Granada · <a href="index.html">crecemia.es</a> · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a></div></footer>
+<nav class="sticky" aria-label="Contacto rápido"><a class="c" href="tel:+34620762842">Llamar</a><a class="w" href="https://wa.me/34620762842?text=Hola%2C%20me%20interesa%20Recepcionista%20de%20voz" target="_blank" rel="noopener">WhatsApp</a></nav>
+<script>
+(function(){
+  var FORM_URL = 'https://script.google.com/macros/s/AKfycbwBwdnmp4AiEegJpMe1Bm5X-_4w2oKefZ5P_nXAc6L6V8eXDIES44zWcyA5Tt35Fbkx/exec';
+  var s1 = document.getElementById('s1'), s2 = document.getElementById('s2');
+  var need = document.body.getAttribute('data-pre') || '';
+  function toStep2(){ document.getElementById('chosen').textContent = 'Te interesa: ' + need; s1.hidden = true; s2.hidden = false; document.getElementById('fName').focus(); }
+  [].forEach.call(document.querySelectorAll('.chips button'), function(b){
+    b.addEventListener('click', function(){
+      [].forEach.call(document.querySelectorAll('.chips button'), function(x){ x.setAttribute('aria-pressed','false'); });
+      b.setAttribute('aria-pressed','true'); need = b.textContent; toStep2();
+    });
+  });
+  document.getElementById('back').addEventListener('click', function(){ s2.hidden = true; s1.hidden = false; });
+  var form = document.getElementById('lead');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = form.nombre.value.trim(), tel = form.telefono.value.replace(/[^0-9+]/g,''), err = document.getElementById('err');
+    if (!name || tel.replace(/\D/g,'').length < 9){ err.textContent = 'Pon tu nombre y un teléfono para poder llamarte.'; err.hidden = false; return; }
+    err.hidden = true;
+    var btn = document.getElementById('go'); btn.disabled = true; btn.textContent = 'Enviando…';
+    var q = new URLSearchParams(location.search);
+    var data = { tipo: 'Landing Google Ads', nombre: name, empresa: '', contacto: tel, email: '', sitio: '', dia: '', franja: '',
+      servicio: need, pagina: location.pathname.split('/').pop(), url_trap: form.url_trap.value,
+      utm: [q.get('utm_campaign'), q.get('utm_term'), q.get('gclid') ? 'gclid' : ''].filter(Boolean).join(' | ') };
+    function go(){
+      try { if (window.nexbiaConversion) window.nexbiaConversion('landing'); } catch(e) {}
+      try { sessionStorage.setItem('crecemia-lead', name.split(' ')[0]); } catch(e) {}
+      setTimeout(function(){ location.href = 'gracias.html'; }, 400);
+    }
+    function fail(){
+      btn.disabled = false; btn.textContent = 'Quiero que me llaméis →';
+      err.innerHTML = 'No se ha podido enviar. <a href="https://wa.me/34620762842?text=' + encodeURIComponent('Hola, soy ' + name + '. Me interesa: ' + need + '. Mi teléfono: ' + tel) + '" target="_blank" rel="noopener"><b>Escríbenos por WhatsApp →</b></a>';
+      err.hidden = false;
+    }
+    fetch(FORM_URL, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(data) }).then(go).catch(fail);
+  });
+  if (need) { /* página con servicio ya elegido: se puede saltar el paso 1 */ }
+})();
+</script>
+</body>
+</html>
