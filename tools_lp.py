@@ -168,7 +168,7 @@ def page(slug, p):
           <button class="go" id="go" type="submit">Quiero que me llaméis →</button>
           <p class="err" id="err" hidden></p>
           <button class="back" id="back" type="button">← Cambiar lo que necesito</button>
-          <p class="legal">Responsable: Daniel Mata Jiménez (Crecemia). Usamos tu nombre y teléfono solo para llamarte por esta consulta. Puedes ejercer tus derechos escribiendo a info@nexbia.es. <a href="privacidad.html">Política de privacidad</a>.</p>
+          <p class="legal">Responsable: Daniel Mata Jiménez (Crecemia). Usamos tu nombre y teléfono solo para llamarte por esta consulta. Puedes ejercer tus derechos escribiendo a info@crecemia.es. <a href="privacidad.html">Política de privacidad</a>.</p>
         </form>
       </div>
     </aside>

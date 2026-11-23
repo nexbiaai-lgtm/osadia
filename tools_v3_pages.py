@@ -87,7 +87,7 @@ def reviews_html():
                      f'<blockquote>{H.escape(text)}</blockquote><figcaption class="rv-who"><span class="rv-av" style="background:{col}">{ini}</span>'
                      f'<span><b>{H.escape(name)}</b>Reseña en Google</span></figcaption></figure>')
     return ('<section class="rv-wrap" id="resenas" aria-labelledby="rv-t"><div class="rv-top"><h2 id="rv-t">Lo que dicen nuestros clientes</h2>'
-            f'<a class="rv-score" href="https://www.google.com/search?q=Crecemia+Granada" target="_blank" rel="noopener">{G_SVG}<b>5,0</b><span class="rv-stars">★★★★★</span><span>en Google</span></a></div>'
+            f'<a class="rv-score" href="https://www.google.com/maps?cid=12305134602711076905" target="_blank" rel="noopener">{G_SVG}<b>5,0</b><span class="rv-stars">★★★★★</span><span>en Google</span></a></div>'
             '<div class="rv-grid">' + ''.join(cards) + '</div></section>\n')
 
 REDES_CARD = ('<a class="sg-card" href="redes-sociales.html"><span class="sg-svc">Redes sociales</span><h3>Publicas cuando te acuerdas y nadie te escribe</h3>'
