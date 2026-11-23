@@ -29,7 +29,49 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "@id": "https://www.crecemia.es/#website", "url": "https://www.crecemia.es/", "name": "Crecemia", "inLanguage": "es-ES", "publisher": {"@id": "https://www.crecemia.es/#organization"}}</script>
 <noscript><style>#intro-loader{display:none!important}body.intro-active{overflow:visible!important}body.intro-active header.nav,body.intro-active main{opacity:1!important;animation:none!important;transform:none!important}.o1-wrap .o1-step .o1-card>*,.o1-wrap .o1-dot,.gs-step,.rv{opacity:1!important;transform:none!important}</style></noscript>
 <script src="consent.js?v=3"></script>
-</head>
+<style id="home-v2">
+.sg-head{text-align:center;margin:10px auto 26px}.sg-head h2{font-family:Sora,sans-serif;font-size:2rem;margin:8px 0 0;color:#1E1650}
+.sg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1080px;margin:0 auto}
+.sg-card{display:flex;flex-direction:column;gap:10px;background:#fff;border:1px solid #E6DDFB;border-radius:20px;padding:24px;text-decoration:none;color:#2A2350;box-shadow:0 18px 40px -30px rgba(43,26,110,.35);transition:transform .15s}
+.sg-card:hover{transform:translateY(-3px)}.sg-svc{font:600 .78rem Inter,sans-serif;color:#6A3DD8;text-transform:uppercase;letter-spacing:.06em}
+.sg-card h3{font:700 1.12rem/1.3 Sora,sans-serif;margin:0;color:#1E1650}.sg-card p{margin:0;font-size:.95rem;color:#4A4470}
+.sg-foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid #F0EAFE;font-size:.86rem;color:#6A3DD8}.sg-foot b{color:#1E1650;white-space:nowrap}.sg-foot>span{white-space:nowrap}.sg-foot{flex-wrap:wrap;gap:6px 12px}.sg-calc h2{font-size:1.45rem!important;line-height:1.2}.sg-calc .o1-calc-out b{font-size:2.2rem}
+.sg-calc{border-radius:20px}.sg-calc .o1-card{height:100%;box-sizing:border-box}
+@media(max-width:860px){.sg-grid{grid-template-columns:1fr}}
+.slot{max-width:980px;margin:40px auto 10px}
+.pv-tag{display:inline-block;background:#1E1650;color:#fff;font:600 .8rem Inter;padding:6px 12px;border-radius:99px;margin-bottom:14px}
+/* A */
+.optA{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.optA .pc{background:#fff;border:1px solid #E6DDFB;border-radius:18px;padding:20px;text-align:center}
+.optA .pc b{display:block;font:800 1.35rem Sora,sans-serif;color:#1E1650}.optA .pc span{font-size:.88rem;color:#4A4470}
+.optA .pc.hl{background:linear-gradient(135deg,#4B3AA6,#7A4FD1);border:0}.optA .pc.hl b,.optA .pc.hl span{color:#fff}
+/* B */
+.optB{display:grid;grid-template-columns:1.1fr 1fr;gap:18px;align-items:stretch}
+.demo{text-align:left;background:linear-gradient(135deg,#4B3AA6,#7A4FD1);color:#fff;border-radius:24px;padding:32px;display:flex;flex-direction:column;gap:12px}
+.demo h3{font:800 1.6rem/1.2 Sora,sans-serif;margin:0;color:#fff}.demo p{margin:0;color:#EDE6FF}
+.demo a.call{align-self:flex-start;background:#fff;color:#4B3AA6;font:700 1.15rem Sora;padding:14px 22px;border-radius:14px;text-decoration:none;margin-top:6px}
+.demo small{color:#DCCFFF}
+.chat{text-align:left;background:#ECE5DD;border-radius:24px;padding:18px;display:flex;flex-direction:column;gap:8px;font-size:.92rem}
+.chat .top{font:600 .82rem Inter;color:#54656F;text-align:center;margin-bottom:4px}
+.chat .m{max-width:82%;padding:9px 12px;border-radius:12px;background:#fff;color:#111;box-shadow:0 1px 0 rgba(0,0,0,.08)}
+.chat .m.me{align-self:flex-end;background:#D9FDD3}.chat .ex{font-size:.72rem;color:#6b6b6b;text-align:center;margin-top:4px}
+/* C */
+.optC{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
+.st{background:#fff;border:1px solid #E6DDFB;border-radius:20px;padding:24px;position:relative}
+.st .n{width:38px;height:38px;border-radius:50%;background:#EFE7FF;color:#4B3AA6;font:800 1rem Sora;display:grid;place-items:center;margin-bottom:12px}
+.st h3{font:700 1.1rem Sora,sans-serif;margin:0 0 6px;color:#1E1650}.st p{margin:0;font-size:.93rem;color:#4A4470}
+.optC-foot{text-align:center;margin-top:16px;font-size:.95rem;color:#4A4470}.optC-foot b{color:#1E1650}
+</style><style id="home-v2-m">
+.m-sticky{display:none}
+@media(max-width:640px){
+ .m-sticky{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#fff;box-shadow:0 -8px 24px rgba(45,25,110,.12)}
+ .m-sticky a{flex:1;text-align:center;text-decoration:none;font-weight:700;border-radius:999px;padding:14px 8px;font-family:Inter,sans-serif}
+ .m-sticky .c{background:#4B3AA6;color:#fff}.m-sticky .w{background:#E9FBF1;color:#0E7A43}
+ .whatsapp-fab{display:none!important} body{padding-bottom:76px}
+ .optA{grid-template-columns:1fr 1fr}.optB{grid-template-columns:1fr}.optC{grid-template-columns:1fr}
+ .demo{padding:24px}.demo h3{font-size:1.3rem}.optA .pc{padding:16px 10px}.optA .pc b{font-size:1.05rem}.optA .pc span{font-size:.8rem}
+}
+</style></head>
 <body class="intro-active">
 <div id="intro-loader" aria-hidden="true">
   <div class="intro-logo"><svg viewBox="0 0 120 120"><g transform="skewX(-10)"><rect x="20" y="64" width="22" height="36" rx="11" fill="#4B3AA6"/><rect x="49" y="38" width="22" height="62" rx="11" fill="#7A4FD1"/><rect x="78" y="12" width="22" height="88" rx="11" fill="#C6A9FF"/></g></svg><span>Crecemia</span></div>
@@ -66,17 +108,20 @@
   <p class="lead">Contestamos tus llamadas y WhatsApp, llenamos tu agenda y hacemos que te encuentren en Google. Tú te ocupas de tu negocio.</p>
   <div class="qf-hero" data-quick-form></div>
   <a class="hero-wa qf-wa" href="https://wa.me/34620762842" target="_blank" rel="noopener">o escríbenos por WhatsApp</a>
-  <div class="hero-video" data-hv>
-    <video autoplay muted loop playsinline preload="metadata" poster="video/hero-w-poster.jpg" width="1280" height="720" aria-label="Vídeo: Crecemia atiende llamadas y WhatsApp, reserva citas y automatiza facturas mientras trabajas">
-      <source media="(max-width: 640px)" src="video/hero-s.mp4" type="video/mp4">
-      <source src="video/hero-w.mp4" type="video/mp4">
-    </video>
-    <div class="hv-cta">
-      <p>Mientras tú trabajas, tus clientes ya están atendidos</p>
-      <a class="btn btn-primary btn-lg" href="#consultoria" tabindex="-1">Reserva tu llamada gratis de 15 min</a>
-    </div>
-  </div>
-  <div class="hero-clients"><span>Empresas que ya confían en nosotros</span><div class="logo-marquee" role="region" aria-label="Logos de clientes"><div class="logo-track"><div class="logo-set"><img decoding="async" width="256" height="201" src="logos/bhd-vintage.jpg" alt="Logo de BHD Vintage"><img decoding="async" width="360" height="360" src="logos/jj-mayoni.jpg" alt="Logo de Pescados y Mariscos J.J. Mayoni"><img decoding="async" width="360" height="270" src="logos/n-digital-law.jpg" alt="Logo de N Digital Law"><img decoding="async" width="472" height="188" src="logos/rydalca.jpg" alt="Logo de Rydalca"><img decoding="async" width="360" height="360" src="logos/lock-wash.jpg" alt="Logo de Lock & Wash Experience"><img decoding="async" width="178" height="190" src="logos/dentalproff.jpg" alt="Logo de DentalProff"><img decoding="async" width="228" height="82" src="logos/sba.jpg" alt="Logo de SmartBook AI (SBA)"></div><div class="logo-set" aria-hidden="true"><img decoding="async" width="256" height="201" src="logos/bhd-vintage.jpg" alt=""><img decoding="async" width="360" height="360" src="logos/jj-mayoni.jpg" alt=""><img decoding="async" width="360" height="270" src="logos/n-digital-law.jpg" alt=""><img decoding="async" width="472" height="188" src="logos/rydalca.jpg" alt=""><img decoding="async" width="360" height="360" src="logos/lock-wash.jpg" alt=""><img decoding="async" width="178" height="190" src="logos/dentalproff.jpg" alt=""><img decoding="async" width="228" height="82" src="logos/sba.jpg" alt=""></div></div></div></div>
+  <div class="slot"><div class="optB">
+<div class="demo"><span style="font:600 .8rem Inter;opacity:.85;text-transform:uppercase;letter-spacing:.06em">Pruébalo ahora</span><h3>Llama y habla con nuestra recepcionista de IA</h3><p>Es la demo de una clínica: pide cita, pregunta horarios o precios. Así atendería tu teléfono.</p><a class="call" href="tel:+34936940926">📞 936 94 09 26</a><small>Llamada normal, sin registro</small></div>
+<div class="chat"><div class="top">Así responde un chatbot de WhatsApp</div>
+<div class="m me">Hola, ¿tenéis hueco mañana por la tarde?</div>
+<div class="m">¡Hola! Mañana tengo libre a las 17:00 y a las 18:30. ¿Cuál te viene mejor?</div>
+<div class="m me">17:00 perfecto</div>
+<div class="m">Hecho ✅ Te he reservado mañana a las 17:00. Te mando un recordatorio una hora antes.</div>
+<div class="ex">Conversación de ejemplo</div></div>
+</div></div><div class="slot" style="margin-top:18px"><div class="optA">
+<div class="pc"><b>Desde 199 €</b><span>Webs que captan clientes</span></div>
+<div class="pc"><b>Desde 99 €/mes</b><span>Chatbot de WhatsApp</span></div>
+<div class="pc"><b>15 min</b><span>Consultoría gratis</span></div>
+<div class="pc hl"><b>0</b><span>Permanencia: te vas cuando quieras</span></div>
+</div></div><div class="hero-clients"><span>Empresas que ya confían en nosotros</span><div class="logo-marquee" role="region" aria-label="Logos de clientes"><div class="logo-track"><div class="logo-set"><img decoding="async" width="256" height="201" src="logos/bhd-vintage.jpg" alt="Logo de BHD Vintage"><img decoding="async" width="360" height="360" src="logos/jj-mayoni.jpg" alt="Logo de Pescados y Mariscos J.J. Mayoni"><img decoding="async" width="360" height="270" src="logos/n-digital-law.jpg" alt="Logo de N Digital Law"><img decoding="async" width="472" height="188" src="logos/rydalca.jpg" alt="Logo de Rydalca"><img decoding="async" width="360" height="360" src="logos/lock-wash.jpg" alt="Logo de Lock & Wash Experience"><img decoding="async" width="178" height="190" src="logos/dentalproff.jpg" alt="Logo de DentalProff"><img decoding="async" width="228" height="82" src="logos/sba.jpg" alt="Logo de SmartBook AI (SBA)"></div><div class="logo-set" aria-hidden="true"><img decoding="async" width="256" height="201" src="logos/bhd-vintage.jpg" alt=""><img decoding="async" width="360" height="360" src="logos/jj-mayoni.jpg" alt=""><img decoding="async" width="360" height="270" src="logos/n-digital-law.jpg" alt=""><img decoding="async" width="472" height="188" src="logos/rydalca.jpg" alt=""><img decoding="async" width="360" height="360" src="logos/lock-wash.jpg" alt=""><img decoding="async" width="178" height="190" src="logos/dentalproff.jpg" alt=""><img decoding="async" width="228" height="82" src="logos/sba.jpg" alt=""></div></div></div></div>
 </div>
 <section class="geo-lead" id="auditoria-geo">
   <div class="wrap">
@@ -108,57 +153,9 @@
   </div>
 </section>
 <section class="band-plain o1" id="beneficios">
-  <div class="wrap o1-wrap" data-o1journey>
-    <div class="o1-line" aria-hidden="true"><i></i><b class="o1-spark"></b></div>
-    <ol class="o1-path">
-            <li class="o1-step" data-o1>
-      <span class="o1-dot">1</span>
-      <div class="o1-card">
-        <span class="o1-svc"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H8l-4 4V5Z" stroke="#D9C4FF" stroke-width="1.8" stroke-linejoin="round"/></svg> Chatbots</span>
-        <h2>Mientras tardas en contestar, tu cliente ya ha escrito a otro</h2>
-        <p class="o1-sol">Nuestro chatbot responde WhatsApp, Instagram y tu web al momento, también de noche.</p>
-        <div class="o1-gain o1-loss"><span>Hoy pierdes</span><b>6 h</b><span>a la semana contestando lo mismo</span></div>
-        <div class="o1-actions"><a class="o1-more" href="chatbots.html">Ver cómo funciona <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-      </div>
-    </li><li class="o1-step" data-o1>
-      <span class="o1-dot">2</span>
-      <div class="o1-card">
-        <span class="o1-svc"><svg viewBox="0 0 24 24" fill="none"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Z" stroke="#D9C4FF" stroke-width="1.8"/><path d="M6 11a6 6 0 0 0 12 0M12 18v3" stroke="#D9C4FF" stroke-width="1.8" stroke-linecap="round"/></svg> Asistentes de voz</span>
-        <h2>Cada llamada que no coges es un cliente para tu competencia</h2>
-        <p class="o1-sol">Una recepcionista con IA coge el teléfono en tu número de siempre y te pasa el resumen.</p>
-        <div class="o1-gain o1-loss"><span>Hoy pierdes</span><b>5 h</b><span>a la semana pegado al teléfono</span></div>
-        <div class="o1-actions"><a class="o1-more" href="voz.html">Ver cómo funciona <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-      </div>
-    </li><li class="o1-step" data-o1>
-      <span class="o1-dot">3</span>
-      <div class="o1-card">
-        <span class="o1-svc"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="#D9C4FF" stroke-width="1.8"/><path d="M4 9h16" stroke="#D9C4FF" stroke-width="1.8"/></svg> Páginas web</span>
-        <h2>Tienes web, pero las citas siguen llegando por teléfono</h2>
-        <p class="o1-sol">Tu web reserva sola: el cliente elige hueco y te llega a la agenda y a WhatsApp.</p>
-        <div class="o1-gain o1-loss"><span>Hoy pierdes</span><b>3 h</b><span>a la semana dando citas a mano</span></div>
-        <div class="o1-actions"><a class="o1-more" href="web.html">Ver cómo funciona <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-      </div>
-    </li><li class="o1-step" data-o1>
-      <span class="o1-dot">4</span>
-      <div class="o1-card">
-        <span class="o1-svc"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12h4l2-6 4 12 2-6h4" stroke="#D9C4FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Automatizaciones</span>
-        <h2>Pagas horas de trabajo por copiar datos de un sitio a otro</h2>
-        <p class="o1-sol">Conectamos tus programas para que facturas, recordatorios y datos se muevan solos.</p>
-        <div class="o1-gain o1-loss"><span>Hoy pierdes</span><b>4 h</b><span>a la semana de papeleo</span></div>
-        <div class="o1-actions"><a class="o1-more" href="automatizaciones.html">Ver cómo funciona <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-      </div>
-    </li><li class="o1-step" data-o1>
-      <span class="o1-dot">5</span>
-      <div class="o1-card">
-        <span class="o1-svc"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#D9C4FF" stroke-width="1.8"/><path d="m20 20-3.5-3.5" stroke="#D9C4FF" stroke-width="1.8" stroke-linecap="round"/></svg> SEO y GEO</span>
-        <h2>Si no te encuentran en Google ni te recomienda ChatGPT, eligen a otro</h2>
-        <p class="o1-sol">Te posicionamos en Google y en la IA para que te encuentren cuando buscan lo que ofreces.</p>
-        <div class="o1-gain o1-loss"><span>Hoy pierdes</span><b>Clientes</b><span>que hoy se lleva tu competencia</span></div>
-        <div class="o1-actions"><a class="o1-more" href="seo.html">Ver cómo funciona <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-      </div>
-    </li>
-      <li class="o1-step o1-final" id="calculadora" data-o1>
-        <span class="o1-dot">✓</span>
+  <div class="wrap o1-wrap">
+    <div class="sg-head"><span class="eyebrow-inline">Lo que hacemos</span><h2>Elige por dónde empezar</h2></div><div class="sg-grid"><a class="sg-card" href="chatbots.html"><span class="sg-svc">Chatbots</span><h3>Mientras tardas en contestar, tu cliente ya ha escrito a otro</h3><p>Nuestro chatbot responde WhatsApp, Instagram y tu web al momento, también de noche.</p><span class="sg-foot"><b>Desde 99 €/mes</b><span>Ver cómo funciona →</span></span></a><a class="sg-card" href="voz.html"><span class="sg-svc">Asistentes de voz</span><h3>Cada llamada que no coges es un cliente para tu competencia</h3><p>Una recepcionista con IA coge el teléfono en tu número de siempre y te pasa el resumen.</p><span class="sg-foot"><b>Prueba la demo</b><span>Ver cómo funciona →</span></span></a><a class="sg-card" href="web.html"><span class="sg-svc">Páginas web</span><h3>Tienes web, pero las citas siguen llegando por teléfono</h3><p>Tu web reserva sola: el cliente elige hueco y te llega a la agenda y a WhatsApp.</p><span class="sg-foot"><b>Desde 199 €</b><span>Ver cómo funciona →</span></span></a><a class="sg-card" href="automatizaciones.html"><span class="sg-svc">Automatizaciones</span><h3>Pagas horas de trabajo por copiar datos de un sitio a otro</h3><p>Conectamos tus programas para que facturas, recordatorios y datos se muevan solos.</p><span class="sg-foot"><b>Precio cerrado</b><span>Ver cómo funciona →</span></span></a><a class="sg-card" href="seo.html"><span class="sg-svc">SEO y GEO</span><h3>Si no te encuentran en Google ni te recomienda ChatGPT, eligen a otro</h3><p>Te posicionamos en Google y en la IA para que te encuentren cuando buscan lo que ofreces.</p><span class="sg-foot"><b>Auditoría GEO gratis</b><span>Ver cómo funciona →</span></span></a><div class="sg-calc o1-final" id="calculadora">
+        
         <div class="o1-card">
           <span class="o1-svc">La cuenta</span>
           <h2>Son 18 horas a la semana. ¿Cuánto vale tu hora?</h2>
@@ -169,9 +166,12 @@
           <p class="o1-calc-out" aria-live="polite"><b id="o1Month">1.800 €</b> al mes se te van en tareas que podemos hacer nosotros.</p>
           <small>Cálculo orientativo: 18 h a la semana × 4 semanas, para una pyme que atiende a muchos clientes.</small>
         </div>
-      </li>
-    </ol>
-    <div class="o1-cta" data-o1box>
+      </div></div>
+    <div class="slot sg-steps"><div class="sg-head"><span class="eyebrow-inline">Cómo trabajamos</span><h2>Empezar es fácil</h2></div><div class="optC">
+<div class="st"><div class="n">1</div><h3>Hablamos 15 minutos</h3><p>Nos cuentas cómo trabajas y te decimos dónde pierdes clientes y tiempo.</p></div>
+<div class="st"><div class="n">2</div><h3>Te damos un precio cerrado</h3><p>Una propuesta clara, sin letra pequeña y sin permanencia.</p></div>
+<div class="st"><div class="n">3</div><h3>Lo dejamos funcionando</h3><p>Lo montamos, lo probamos contigo y te enseñamos a usarlo.</p></div>
+</div><p class="optC-foot">Webs desde <b>199 €</b> · Chatbots desde <b>99 €/mes</b> · <b>Sin permanencia</b></p></div><div class="o1-cta" data-o1box>
       <svg class="o1-ring" aria-hidden="true"><path class="o1-ring-r" pathLength="1000"/><path class="o1-ring-l" pathLength="1000"/></svg>
       <p class="o1-ask">En 15 minutos te decimos dónde estás perdiendo clientes y tiempo</p>
       <a class="btn btn-primary btn-lg o1-big btn-cta" href="#consultoria">CONTACTA AHORA GRATIS</a>
@@ -324,5 +324,5 @@
 </a></aside>
 
 <script src="script.js?v=38fac977"></script>
-</body>
+<nav class="m-sticky" aria-label="Contacto rápido"><a class="c" href="tel:+34620762842">📞 Llamar</a><a class="w" href="https://wa.me/34620762842?text=Hola%2C%20me%20interesa%20una%20consultor%C3%ADa" target="_blank" rel="noopener">WhatsApp</a></nav></body>
 </html>
