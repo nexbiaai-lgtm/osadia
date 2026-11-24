@@ -86,8 +86,22 @@ main = f'''<main>
 </section>
 <section>
   <div class="wrap">
-    <div class="section-head"><h2>Así llevamos nuestras propias redes</h2><p>Publicaciones reales de nuestro Instagram. Toca una para verla.</p></div>
-    {ig_grid('rs-feed', 4)}
+    <div class="section-head"><h2>Así crece una cuenta con un plan constante</h2><p>Más gente que te ve, más mensajes y, al final, más clientes.</p></div>
+    <div class="gr" data-anim>
+      <div class="gr-phone">
+        <div class="gr-prof"><span class="gr-av">TN</span><div><b>Tu negocio</b><small>@tunegocio · Granada</small></div></div>
+        <div class="gr-stats"><div><b data-count="4820">0</b><span>seguidores</span></div><div><b data-count="128400">0</b><span>vistas al mes</span></div><div><b data-count="186">0</b><span>mensajes</span></div></div>
+        <div class="gr-feed"><i></i><i></i><i class="v"><em data-count="48700">0</em></i><i></i><i class="v"><em data-count="21300">0</em></i><i></i></div>
+        <div class="gr-toasts"><p>💬 «¿Tenéis cita el sábado?»</p><p>📅 Nueva reserva desde Instagram</p><p>❤️ +120 seguidores hoy</p><p>🛍️ «¿Cuánto cuesta? Me interesa»</p></div>
+      </div>
+      <div class="gr-side">
+        <div class="gr-chart"><p class="gr-t">Seguidores mes a mes</p>
+          <div class="gr-bars">{''.join(f'<div style="--h:{h}%;--d:{i*0.12:.2f}s"><b>{v}</b><span>Mes {i+1}</span></div>' for i,(h,v) in enumerate([(14,'620'),(22,'1.050'),(35,'1.740'),(52,'2.610'),(74,'3.700'),(100,'4.820')]))}</div>
+        </div>
+        <div class="gr-kpis"><div><b data-count="380" data-pre="+" data-suf=" %">0</b><span>más alcance</span></div><div><b data-count="186">0</b><span>mensajes de clientes</span></div><div class="hl"><b data-count="42">0</b><span>clientes nuevos</span></div></div>
+      </div>
+    </div>
+    <p class="ad-note" style="text-align:center">Ejemplo ilustrativo de cómo evoluciona una cuenta en 6 meses con publicaciones y vídeos constantes. No son resultados de un cliente: cada negocio tiene sus propios números y te los enseñamos cada mes.</p>
   </div>
 </section>
 <section class="band-light" id="planes">
@@ -120,7 +134,7 @@ main = f'''<main>
     </div>
   </div>
 </section>
-</main>'''
+</main>'''+'''<script>(function(){var rm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;function fmt(v){return String(Math.round(v)).replace(/\B(?=(\d{3})+(?!\d))/g,".")}function run(el){el.classList.add("on");el.querySelectorAll("[data-count]").forEach(function(b){var t=+b.dataset.count,p0=b.dataset.pre||"",s=b.dataset.suf||"";if(rm){b.textContent=p0+fmt(t)+s;return}var t0=null;function st(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/2200,1),e=1-Math.pow(1-p,3);b.textContent=p0+fmt(t*e)+s;if(p<1)requestAnimationFrame(st)}requestAnimationFrame(st)})}var els=document.querySelectorAll("[data-anim]");if(!("IntersectionObserver" in window)){els.forEach(run);return}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run(e.target);io.unobserve(e.target)}})},{threshold:.3});els.forEach(function(el){io.observe(el)})})();</script>'''
 
 open('redes-sociales.html', 'w', encoding='utf-8').write(head + main + foot)
 print('ok')

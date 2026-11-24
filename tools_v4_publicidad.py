@@ -88,7 +88,7 @@ CALC = '''<div class="ad-calc" data-calc>
 
 JS = '''<script>(function(){
 var rm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
-function fmt(v,d){return v.toLocaleString("es-ES",{minimumFractionDigits:d,maximumFractionDigits:d})}
+function fmt(v,d){var p=v.toFixed(d).split(".");return p[0].replace(/\B(?=(\d{3})+(?!\d))/g,".")+(d?","+p[1]:"")}
 function run(el){el.classList.add("on");el.querySelectorAll("[data-count]").forEach(function(b){var t=parseFloat(b.dataset.count),d=+(b.dataset.dec||0),s=b.dataset.suf||"";if(rm){b.textContent=fmt(t,d)+s;return}var t0=null;function st(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1600,1),e=1-Math.pow(1-p,3);b.textContent=fmt(t*e,d)+s;if(p<1)requestAnimationFrame(st)}requestAnimationFrame(st)})}
 var io="IntersectionObserver" in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run(e.target);io.unobserve(e.target)}})},{threshold:.3}):null;
 document.querySelectorAll("[data-anim]").forEach(function(el){io?io.observe(el):run(el)});
