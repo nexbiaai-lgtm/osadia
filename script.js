@@ -903,21 +903,41 @@ var NEXBIA_FORM_URL = 'https://script.google.com/macros/s/AKfycbwBwdnmp4AiEegJpM
 /* ===== Formulario rápido (portada + ventana desde cualquier "Consultoría gratis") ===== */
 (function(){
   if (typeof NEXBIA_FORM_URL === 'undefined') return;
-  var TEMAS = ['Atender llamadas y WhatsApp', 'Más clientes desde Google', 'Quitarme papeleo', 'Una web nueva'];
+  var IC = {
+    tel: '<path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/>',
+    pin: '<path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>',
+    heart: '<path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.3 2.4.7-1.2 2.2-2.4 4.3-2.4 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/>',
+    ads: '<path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1zm13.5 1A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/>',
+    web: '<path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-6v2h3v2H7v-2h3v-2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v10h16V6z"/>',
+    doc: '<path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5zM8 13h8v2H8zm0 4h8v2H8z"/>'
+  };
+  var TEMAS = [
+    ['Atender llamadas y WhatsApp', 'Que nadie se quede sin respuesta', 'tel'],
+    ['Más clientes desde Google', 'Salir en Google y en Maps', 'pin'],
+    ['Redes sociales', 'Publicar sin pensar en ello', 'heart'],
+    ['Anuncios en Google y Meta', 'Anuncios que traen contactos', 'ads'],
+    ['Una web nueva', 'Que te pidan cita sola', 'web'],
+    ['Quitarme papeleo', 'Facturas, citas y avisos solos', 'doc']
+  ];
   var n = 0;
+  function svg(k){ return '<svg viewBox="0 0 24 24" aria-hidden="true">' + IC[k] + '</svg>'; }
   function html(){
     n++; var p = 'qf' + n;
     return '<form class="qf" novalidate>' +
+      '<div class="qf-top"><span class="qf-badge">Gratis · 15 minutos</span><span class="qf-steps"><b class="qf-s1">1</b><i></i><b class="qf-s2">2</b></span></div>' +
       '<p class="qf-q" id="' + p + 'q">¿Qué quieres mejorar primero?</p>' +
+      '<p class="qf-hint">Elige una opción y te llamamos con ideas para tu negocio.</p>' +
       '<div class="qf-chips" role="group" aria-labelledby="' + p + 'q">' +
-        TEMAS.map(function(t){ return '<button type="button" class="qf-chip" aria-pressed="false">' + t + '</button>'; }).join('') +
+        TEMAS.map(function(t){ return '<button type="button" class="qf-chip" aria-pressed="false" data-t="' + t[0] + '"><span class="qf-ic">' + svg(t[2]) + '</span><span class="qf-tx"><b>' + t[0] + '</b><small>' + t[1] + '</small></span><span class="qf-ck" aria-hidden="true"></span></button>'; }).join('') +
       '</div>' +
       '<div class="qf-fields">' +
+        '<p class="qf-q2">¿A quién llamamos?</p>' +
         '<label class="qf-l" for="' + p + 'n">Tu nombre</label><input class="qf-in" id="' + p + 'n" name="nombre" autocomplete="name" placeholder="Tu nombre">' +
         '<label class="qf-l" for="' + p + 't">Teléfono o WhatsApp</label><input class="qf-in" id="' + p + 't" name="contacto" type="tel" inputmode="tel" autocomplete="tel" placeholder="Teléfono o WhatsApp">' +
         '<input class="hp-field" name="url_trap" tabindex="-1" autocomplete="off" aria-hidden="true">' +
-        '<button type="submit" class="btn btn-primary btn-lg qf-send">Quiero mi llamada gratis</button>' +
+        '<button type="submit" class="btn btn-lg qf-send">Quiero que me llaméis gratis <span aria-hidden="true">→</span></button>' +
       '</div>' +
+      '<ul class="qf-trust"><li>Sin compromiso</li><li>Respuesta en el día</li><li><span class="qf-stars">★★★★★</span> 5,0 en Google</li></ul>' +
       '<p class="qf-err" role="alert" hidden></p>' +
       '<p class="qf-ok" role="status" hidden><b>¡Recibido!</b> Te llamamos en horario de 10:00 a 19:00, de lunes a viernes. Son 15 minutos y sin compromiso.</p>' +
       '<p class="qf-legal">Responsable: Daniel Mata Jiménez (Crecemia). Usamos tu teléfono solo para llamarte. <a href="privacidad.html">Privacidad</a></p>' +
@@ -928,7 +948,7 @@ var NEXBIA_FORM_URL = 'https://script.google.com/macros/s/AKfycbwBwdnmp4AiEegJpM
     form.querySelectorAll('.qf-chip').forEach(function(c){
       c.addEventListener('click', function(){
         form.querySelectorAll('.qf-chip').forEach(function(o){ o.setAttribute('aria-pressed', 'false'); });
-        c.setAttribute('aria-pressed', 'true'); tema = c.textContent;
+        c.setAttribute('aria-pressed', 'true'); tema = c.getAttribute('data-t');
         form.classList.add('qf-open');
         var nm = form.querySelector('[name=nombre]'); if (nm && !nm.value) nm.focus();
       });
@@ -949,7 +969,7 @@ var NEXBIA_FORM_URL = 'https://script.google.com/macros/s/AKfycbwBwdnmp4AiEegJpM
         if (typeof window.nexbiaConversion === 'function') window.nexbiaConversion('llamada-rapida');
       }
       function fail(){
-        btn.disabled = false; btn.textContent = 'Quiero mi llamada gratis';
+        btn.disabled = false; btn.innerHTML = 'Quiero que me llaméis gratis <span aria-hidden="true">→</span>';
         err.innerHTML = 'No se ha podido enviar desde aquí. <a href="https://wa.me/34620762842?text=' + encodeURIComponent('Hola, soy ' + nombre + '. Quiero la llamada gratis' + (tema ? ' sobre: ' + tema : '') + '.') + '" target="_blank" rel="noopener"><b>Escríbenos por WhatsApp →</b></a>';
         err.hidden = false;
       }
