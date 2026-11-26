@@ -1,12 +1,13 @@
-/* Crecemia — banner de cookies + etiqueta de Google Ads (Consent Mode v2, modo básico)
-   La etiqueta de Google NO se carga hasta que el visitante pulsa «Aceptar».
+/* Crecemia — banner de cookies + etiqueta de Google Ads (Consent Mode v2, modo básico) + Microsoft Clarity
+   Ni la etiqueta de Google ni Clarity se cargan hasta que el visitante pulsa «Aceptar».
    Conversión «Contacto»: solo cuando el formulario de reserva o el de auditoría GEO se envían bien.
    Los botones de WhatsApp y de llamar no cuentan como conversión. */
 (function(){
   var TAG_ID = 'GTM-N9B7QQNZ';
   var ADS_ID = 'AW-18571290832';
   var CONVERSION = 'AW-18571290832/AGOlCM7b97gdENDRvZdF';
-  var KEY = 'nexbia-cookies';
+  var CLARITY_ID = 'zjsuxe7f7p'; // Microsoft Clarity: mapas de calor y grabaciones
+  var KEY = 'crecemia-cookies-v2'; // v2: se añadió Clarity, se vuelve a pedir el consentimiento
   var MAX_AGE = 365 * 24 * 3600 * 1000; // volvemos a preguntar a los 12 meses
 
   window.dataLayer = window.dataLayer || [];
@@ -36,11 +37,18 @@
     gtag('js', new Date());
     gtag('config', TAG_ID);
     gtag('config', ADS_ID);
+    loadClarity();
+  }
+  function loadClarity(){
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, 'clarity', 'script', CLARITY_ID);
+    window.clarity('consentv2', { ad_Storage: 'granted', analytics_Storage: 'granted' });
   }
   function clearGoogleCookies(){
     document.cookie.split(';').forEach(function(c){
       var n = c.split('=')[0].trim();
-      if (/^(_gcl|_ga|_gid|_gac)/.test(n)){
+      if (/^(_gcl|_ga|_gid|_gac|_clck|_clsk)/.test(n)){
         var host = location.hostname.replace(/^www\./, '');
         ['', '; domain=' + host, '; domain=.' + host].forEach(function(d){
           document.cookie = n + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + d;
@@ -83,7 +91,7 @@
     var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
     bar = document.createElement('div');
     bar.className = 'ck-bar'; bar.setAttribute('role', 'dialog'); bar.setAttribute('aria-label', 'Cookies');
-    bar.innerHTML = '<p>Usamos cookies de Google Ads para saber si nuestros anuncios funcionan. Solo se activan si las aceptas. <a href="cookies.html">Más información</a></p>' +
+    bar.innerHTML = '<p>Usamos cookies de Google Ads y Microsoft Clarity para saber si nuestros anuncios funcionan y cómo se usa la web. Solo se activan si las aceptas. <a href="cookies.html">Más información</a></p>' +
       '<div class="ck-btns"><button type="button" class="ck-no">Rechazar</button><button type="button" class="ck-yes">Aceptar</button></div>';
     document.body.appendChild(bar);
     bar.querySelector('.ck-yes').addEventListener('click', function(){ saveChoice('granted'); bar.hidden = true; loadTag(); });
@@ -92,6 +100,7 @@
       saveChoice('denied'); bar.hidden = true; clearGoogleCookies();
       if (wasOn){
         gtag('consent', 'update', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied' });
+        if (typeof window.clarity === 'function') window.clarity('consentv2', { ad_Storage: 'denied', analytics_Storage: 'denied' });
         location.reload();
       }
     });
