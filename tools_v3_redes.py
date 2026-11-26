@@ -63,7 +63,7 @@ def card(t, p, n=None):
 
 main = f'''<main>
 <div class="wrap page-hero">
-  <div class="breadcrumb"><a href="index.html">Inicio</a><span>/</span><span>Redes sociales</span></div>
+  <div class="breadcrumb"><a href="/">Inicio</a><span>/</span><span>Redes sociales</span></div>
   <div class="ph-grid"><div class="ph-main"><h1>Gestión de redes sociales en Granada: <span class="hl-hand">tus redes al día</span> sin que tengas que pensar en ellas</h1>
   <p class="lead">Nos encargamos de tu Instagram, TikTok y Facebook: ideas, diseño, vídeos cortos, textos y publicación. Tú solo nos mandas fotos de tu día a día.</p>
   <div class="cta-row" style="margin-top:22px;">

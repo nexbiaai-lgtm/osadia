@@ -50,7 +50,7 @@ def article_page(p):
     more = [x for x in ALL if x['slug'] != p['slug']][:6]
     main = f'''<main>
 <article class="post wrap">
-  <div class="breadcrumb"><a href="index.html">Inicio</a><span>/</span><a href="blog.html">Blog</a><span>/</span><span>{esc(p["title"])}</span></div>
+  <div class="breadcrumb"><a href="/">Inicio</a><span>/</span><a href="blog.html">Blog</a><span>/</span><span>{esc(p["title"])}</span></div>
   <div class="post-cover c-{SECTIONS[p["section"]]}" aria-hidden="true"><i>{esc(p["section"])}</i><b>{esc(p["word"])}</b></div>
   <header class="post-head">
     <p class="post-meta"><time datetime="{p["date"]}">{fecha(p["date"])}</time> · {p["min"]} min de lectura · Equipo Crecemia</p>
@@ -101,7 +101,7 @@ def blog_index():
     ticker = ''.join(f'<li><b>¿Sabías que…?</b> {esc(t)} <small>({esc(src)})</small></li>' for t, src in FACTS)
     main = f'''<main>
 <div class="wrap news">
-  <div class="breadcrumb"><a href="index.html">Inicio</a><span>/</span><span>Blog</span></div>
+  <div class="breadcrumb"><a href="/">Inicio</a><span>/</span><span>Blog</span></div>
   <header class="news-mast">
     <p class="news-date"><span data-today>{fecha(today, True)}</span> · Granada · Actualizado el {fecha(today)}</p>
     <h1>El Diario de Crecemia</h1>

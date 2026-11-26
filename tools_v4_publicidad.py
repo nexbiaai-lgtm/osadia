@@ -97,7 +97,7 @@ var c=document.querySelector("[data-calc]");if(c){function u(){var b=+c.querySel
 
 main = f'''<main>
 <div class="wrap page-hero">
-  <div class="breadcrumb"><a href="index.html">Inicio</a><span>/</span><span>Publicidad online</span></div>
+  <div class="breadcrumb"><a href="/">Inicio</a><span>/</span><span>Publicidad online</span></div>
   <div class="ad-hero"><div><h1>Publicidad en Google y en redes sociales: <span class="hl-hand">anuncios que te traen clientes</span></h1>
   <p class="lead">Montamos y llevamos tus campañas de Google Ads y Meta Ads (Facebook e Instagram) en Granada. Cada mes ves cuánto has invertido, cuántos te han llamado o escrito y cuánto te ha costado cada cliente.</p>
   <div class="cta-row" style="margin-top:22px;">
